@@ -1,12 +1,58 @@
+/* Basic page styling */
 body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
 }
 
+/* Center main headers */
 h1, h2 {
     text-align: center;
 }
 
+/* Improve readability for paragraphs */
 p {
     line-height: 1.6;
 }
+
+/* Reusable class for section layout */
+.content-box {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Unique styling for the history section */
+#history {
+    border-left: 6px solid #3498db;
+}
+
+/* Unique styling for the modern gaming section */
+#modern {
+    border-left: 6px solid #e67e22;
+}
+
+/* FLEXBOX LAYOUT for History + Modern sections */
+.flex-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* Make both boxes equal width inside the flex container */
+.flex-container .content-box {
+    flex: 1;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+

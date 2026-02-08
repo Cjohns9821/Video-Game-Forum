@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>The Evolution of Video Games</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<link rel="stylesheet" href="css/style.css">
 
 <body>
 
@@ -17,26 +17,39 @@
     <!-- Main content area -->
     <main>
 
-        <!-- Section: Early history of gaming -->
-        <section>
-            <h3>The Early Years (1970s–1980s)</h3>
-            <p>Video games began as simple experiments in laboratories and arcades. Early titles like Pong and Space Invaders introduced the world to interactive digital entertainment.</p>
-            <p>These early games were limited by technology, but they laid the foundation for everything that followed.</p>
+        <!-- FLEXBOX WRAPPER: History + Modern sections -->
+        <div class="flex-container">
 
-            <!-- Image using a relative path -->
-            <img src="images/pong.jpg" alt="Screenshot of the classic game Pong" width="300">
+            <!-- Section: Early history of gaming -->
+            <section id="history" class="content-box">
+                <h3>The Early Years (1970s–1980s)</h3>
+                <p>Video games began as simple experiments in laboratories and arcades. Early titles like Pong and Space Invaders introduced the world to interactive digital entertainment.</p>
+                <p>These early games were limited by technology, but they laid the foundation for everything that followed.</p>
 
-            <!-- Unordered list of early games -->
-            <h4>Popular Early Games</h4>
-            <ul>
-                <li>Pong</li>
-                <li>Space Invaders</li>
-                <li>Pac-Man</li>
-            </ul>
-        </section>
+                <!-- Image using a relative path -->
+                <img src="images/pong.jpg" alt="Screenshot of the classic game Pong" width="300">
+
+                <!-- Unordered list of early games -->
+                <h4>Popular Early Games</h4>
+                <ul>
+                    <li>Pong</li>
+                    <li>Space Invaders</li>
+                    <li>Pac-Man</li>
+                </ul>
+            </section>
+
+            <!-- Section: Modern video games -->
+            <section id="modern" class="content-box">
+                <h3>Modern Video Games</h3>
+                <p>Today’s games feature advanced graphics, online multiplayer, open worlds, and immersive storytelling. Modern gaming spans consoles, PCs, and mobile platforms, reaching millions of players worldwide.</p>
+                <p>From competitive esports to massive open-world adventures, modern gaming continues to push the boundaries of technology and creativity.</p>
+            </section>
+
+        </div>
+        <!-- END FLEXBOX WRAPPER -->
 
         <!-- Section: Link to second page -->
-        <section>
+        <section class="content-box">
             <h3>Continue the Journey</h3>
             <p>As technology improved, video games evolved into 3D worlds, online multiplayer experiences, and cinematic adventures.</p>
 
