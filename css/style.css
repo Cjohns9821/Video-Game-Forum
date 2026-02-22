@@ -1,98 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Modern Gaming and Future Trends</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Basic page styling */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
 
-    <!-- Bootstrap CDN (must be ABOVE your stylesheet) -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
-    >
+/* Center main headers */
+h1, h2 {
+    text-align: center;
+}
 
-    <!-- Your custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+/* Improve readability for paragraphs */
+p {
+    line-height: 1.6;
+}
 
-<body class="bg-light">
+/* Reusable class for section layout — Bootstrap now handles spacing,
+   so we keep only the visual styling */
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-    <!-- Header -->
-    <header class="text-center py-4 bg-dark text-white">
-        <h1>Modern Gaming and Future Trends</h1>
-        <h2 class="fs-4">How Technology Continues to Shape the Gaming World</h2>
-    </header>
+/* Unique styling for the history section */
+#history {
+    border-left: 6px solid #3498db;
+}
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home – Evolution of Video Games</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page2.html">Modern Gaming and Future Trends</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+/* Unique styling for the modern gaming section */
+#modern {
+    border-left: 6px solid #e67e22;
+}
 
-    <!-- Main Content -->
-    <main class="container my-4">
+/* ❌ FLEXBOX LAYOUT REMOVED — Bootstrap grid replaces this
+.flex-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: 90%;
+}
 
-        <!-- 3D and Online Gaming -->
-        <section class="p-3 mb-4 border rounded bg-white shadow-sm">
-            <h3>The Rise of 3D and Online Multiplayer</h3>
-            <p>As hardware improved, developers began creating fully 3D environments that allowed players to explore worlds in new ways. Online multiplayer gaming connected players across the globe, transforming gaming into a social experience.</p>
+.flex-container .content-box {
+    flex: 1;
+}
+*/
 
-            <img src="images/3d-game.jpg" alt="A 3D video game character exploring an open world environment" class="img-fluid rounded mb-3">
+/* Responsive layout for smaller screens — Bootstrap handles most of this,
+   but your image rule is still useful */
+@media (max-width: 800px) {
+    /* No longer needed because Bootstrap handles column stacking */
+}
 
-            <h4>Key Innovations</h4>
-            <ul>
-                <li>3D graphics and physics engines</li>
-                <li>Online multiplayer and matchmaking</li>
-                <li>Voice chat and social features</li>
-            </ul>
-        </section>
+/* --- REQUIRED MEDIA QUERY FOR ASSIGNMENT --- */
+/* Additional responsive improvements for small screens */
+@media (max-width: 600px) {
 
-        <!-- Esports -->
-        <section class="p-3 mb-4 border rounded bg-white shadow-sm">
-            <h3>The Growth of Esports</h3>
-            <p>Competitive gaming has grown into a global industry with professional teams, sponsorships, and massive tournaments. Games like League of Legends, Fortnite, and Counter‑Strike draw millions of viewers.</p>
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
 
-            <img src="images/esports.jpg" alt="Esports players competing on stage in front of a large audience" class="img-fluid rounded mb-3">
-        </section>
+    /* Navigation is now Bootstrap, so these are no longer needed:
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
 
-        <!-- Future Trends -->
-        <section class="p-3 mb-4 border rounded bg-white shadow-sm">
-            <h3>What’s Next for Gaming?</h3>
-            <p>The future of gaming includes virtual reality, augmented reality, AI‑driven storytelling, and cloud gaming. These technologies will continue to push the boundaries of immersion and accessibility.</p>
+    nav ul li {
+        list-style: none;
+    }
+    */
 
-            <h4>Emerging Technologies</h4>
-            <ul>
-                <li>Virtual Reality (VR)</li>
-                <li>Augmented Reality (AR)</li>
-                <li>Cloud gaming platforms</li>
-                <li>AI‑generated content</li>
-            </ul>
-        </section>
+    .content-box {
+        width: 100%;
+        padding: 15px;
+    }
 
-        <!-- Back to Home -->
-        <section class="p-3 mb-4 border rounded bg-white shadow-sm">
-            <h3>Return to the Beginning</h3>
-            <p>Want to revisit how video games began and evolved over time?</p>
-
-            <a href="index.html" class="btn btn-secondary mt-2">
-                Go back to the history of video games
-            </a>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center py-4 bg-dark text-white">
-        <p>&copy; 2024 Video Game Forum – Exploring the Past, Present, and Future of Gaming</p>
-    </footer>
-
-</body>
-</html>
+    /* Bootstrap handles image responsiveness, but this is safe to keep */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
