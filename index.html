@@ -4,74 +4,90 @@
     <meta charset="UTF-8">
     <title>The Evolution of Video Games</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CDN (must be ABOVE your stylesheet) -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Your custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-light">
 
-    <!-- Header: Contains the main title of the webpage -->
-    <header>
+    <!-- Header -->
+    <header class="text-center py-4 bg-dark text-white">
         <h1>The Evolution of Video Games</h1>
-        <h2>How Gaming Grew From Simple Pixels to Massive Worlds</h2>
+        <h2 class="fs-4">How Gaming Grew From Simple Pixels to Massive Worlds</h2>
     </header>
 
-    <!-- Navigation landmark -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home – Evolution of Video Games</a></li>
-            <li><a href="page2.html">Modern Gaming and Future Trends</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home – Evolution of Video Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Modern Gaming and Future Trends</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Main content area -->
-    <main>
+    <!-- Main content -->
+    <main class="container my-4">
 
-        <!-- FLEXBOX WRAPPER: History + Modern sections -->
-        <section class="flex-container">
+        <!-- Two-column layout using Bootstrap grid -->
+        <div class="row g-4">
 
-            <!-- Section: Early history of gaming -->
-            <section id="history" class="content-box">
-                <h3>The Early Years (1970s–1980s)</h3>
-                <p>Video games began as simple experiments in laboratories and arcades. Early titles like Pong and Space Invaders introduced the world to interactive digital entertainment.</p>
-                <p>These early games were limited by technology, but they laid the foundation for everything that followed.</p>
+            <!-- Early history -->
+            <section id="history" class="col-md-6">
+                <div class="p-3 border rounded bg-white shadow-sm">
+                    <h3>The Early Years (1970s–1980s)</h3>
+                    <p>Video games began as simple experiments in laboratories and arcades. Early titles like Pong and Space Invaders introduced the world to interactive digital entertainment.</p>
+                    <p>These early games were limited by technology, but they laid the foundation for everything that followed.</p>
 
-                <!-- Image using a relative path -->
-                <img src="images/pong.jpg" alt="Screenshot of the classic game Pong" width="300">
+                    <img src="images/pong.jpg" alt="Screenshot of the classic game Pong" class="img-fluid rounded mb-3">
 
-                <!-- Unordered list of early games -->
-                <h4>Popular Early Games</h4>
-                <ul>
-                    <li>Pong</li>
-                    <li>Space Invaders</li>
-                    <li>Pac-Man</li>
-                </ul>
+                    <h4>Popular Early Games</h4>
+                    <ul>
+                        <li>Pong</li>
+                        <li>Space Invaders</li>
+                        <li>Pac-Man</li>
+                    </ul>
+                </div>
             </section>
 
-            <!-- Section: Modern video games -->
-            <section id="modern" class="content-box">
-                <h3>Modern Video Games</h3>
-                <p>Today’s games feature advanced graphics, online multiplayer, open worlds, and immersive storytelling. Modern gaming spans consoles, PCs, and mobile platforms, reaching millions of players worldwide.</p>
-                <p>From competitive esports to massive open-world adventures, modern gaming continues to push the boundaries of technology and creativity.</p>
+            <!-- Modern games -->
+            <section id="modern" class="col-md-6">
+                <div class="p-3 border rounded bg-white shadow-sm">
+                    <h3>Modern Video Games</h3>
+                    <p>Today’s games feature advanced graphics, online multiplayer, open worlds, and immersive storytelling. Modern gaming spans consoles, PCs, and mobile platforms, reaching millions of players worldwide.</p>
+                    <p>From competitive esports to massive open-world adventures, modern gaming continues to push the boundaries of technology and creativity.</p>
+                </div>
             </section>
 
-        </section>
-        <!-- END FLEXBOX WRAPPER -->
+        </div>
 
-        <!-- Section: Link to second page -->
-        <section class="content-box">
+        <!-- Continue section -->
+        <section class="mt-4 p-3 border rounded bg-white shadow-sm">
             <h3>Continue the Journey</h3>
             <p>As technology improved, video games evolved into 3D worlds, online multiplayer experiences, and cinematic adventures.</p>
 
-            <!-- Internal link to page2.html with meaningful text -->
-            <a href="page2.html">Learn more about 3D, online, and modern gaming on Page 2</a>
+            <a href="page2.html" class="btn btn-success mt-2">
+                Learn more about 3D, online, and modern gaming on Page 2
+            </a>
         </section>
 
     </main>
 
-    <!-- Footer with navigation link -->
-    <footer>
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
         <p>Explore more about modern gaming:</p>
-        <a href="page2.html">Explore modern gaming trends and technologies</a>
+        <a href="page2.html" class="btn btn-outline-light">Explore modern gaming trends and technologies</a>
     </footer>
 
 </body>
